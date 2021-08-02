@@ -1,26 +1,51 @@
 import React from "react";
-import logo from "./logo.svg";
+import {
+  Center,
+  ChakraProvider,
+  Heading,
+  HStack,
+  Link,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import "./App.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ChakraProvider>
+      <Center minH="0" h="100vh">
+        <VStack alignItems="flex-start">
+          <Heading>Hi, I'm Goh</Heading>
+          <Text>
+            Welcome to my site!
+            <br />
+            If you're looking for a software engineer, then you've come to the
+            right place.
+          </Text>
+          <HStack spacing="3">
+            <Text>Here's some links: </Text>
+            <Link
+              href="https://docs.google.com/document/d/1ueFORxZrO8jNOTykctQwNlhQ7H_0Feo3kNbnkt9gU4c/edit?usp=sharing"
+              isExternal
+              color="blue.400"
+            >
+              resume
+            </Link>
+            <Link href="https://github.com/gohsato" isExternal color="blue.400">
+              github
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/gohsato/"
+              isExternal
+              color="blue.400"
+            >
+              linkedin
+            </Link>
+          </HStack>
+        </VStack>
+      </Center>
+    </ChakraProvider>
   );
-}
+};
 
 export default App;
