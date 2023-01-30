@@ -13,7 +13,7 @@ import "./App.css";
 const App = () => {
   return (
     <ChakraProvider>
-      <Center m="3" minH="0" h="100vh">
+      <Center mx="3" minH="0" h="100vh">
         <VStack alignItems="flex-start">
           <Heading>Hi, I'm Goh</Heading>
           <Text>
